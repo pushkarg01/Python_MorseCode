@@ -20,14 +20,16 @@ def convert_to_morse_code(text):
 
 def play_morse_code(morse_code):
     for symbol in morse_code:
+        # Dot sound
         if symbol == '.':
             playsound('DOT.wav')
-            time.sleep(0.1)
+            time.sleep(0.05)
+        # Dash sound
         elif symbol == '-':
             playsound('DASH.wav')
-            time.sleep(0.1)
+            time.sleep(0.05)
         elif symbol == ' ' or symbol=='/':  
-            time.sleep(0.3)
+            time.sleep(0.2)
         else:
             # Non-alphanumeric characters
             print("Symbol",symbol,"is invalid Character")
